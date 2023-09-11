@@ -42,7 +42,7 @@ class FileUtil extends Logging {
     var oos: ObjectOutputStream = null
     var fos: FileOutputStream = null
     try {
-      tmpFile.getParentFile.mkdirs()
+      createDirectories(tmpFile.toPath)
       fos = new FileOutputStream(tmpFile)
       oos = new ObjectOutputStream(fos)
       oos.writeLong(checksum)
