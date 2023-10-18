@@ -129,7 +129,7 @@ public class TaskConfig extends MapConfig {
 
   // list of checkpoint versions to write during processing
   public static final String CHECKPOINT_WRITE_VERSIONS = "task.checkpoint.write.versions";
-  public static final List<String> DEFAULT_CHECKPOINT_WRITE_VERSIONS = ImmutableList.of("1", "2");
+  public static final List<String> DEFAULT_CHECKPOINT_WRITE_VERSIONS = ImmutableList.of("1");
 
   // checkpoint version to read during container startup
   public static final String CHECKPOINT_READ_VERSIONS = "task.checkpoint.read.versions";

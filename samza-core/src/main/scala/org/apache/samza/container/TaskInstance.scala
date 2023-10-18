@@ -454,7 +454,7 @@ class TaskInstance(
     new Function[util.Map[String, util.Map[String, String]], CompletableFuture[Void]] {
       override def apply(uploadSCMs: util.Map[String, util.Map[String, String]]): CompletableFuture[Void] = {
         // Perform cleanup on unused checkpoints
-        info("Cleaning up old checkpoint state for taskName: %s checkpointId: %s" format(taskName, checkpointId))
+        debug("Cleaning up old checkpoint state for taskName: %s checkpointId: %s" format(taskName, checkpointId))
         val cleanUpStartTime = System.nanoTime()
         try {
           commitManager.cleanUp(checkpointId, uploadSCMs)
