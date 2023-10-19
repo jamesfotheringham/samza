@@ -305,7 +305,7 @@ class KafkaCheckpointManager(checkpointSpec: KafkaStreamSpec,
           } else {
             // Ignore and skip the unknown checkpoint key type. We do not want to throw any exceptions for this case
             // for forwards compatibility with new checkpoints versions in the checkpoint topic
-            warn(s"Ignoring unknown checkpoint key type for checkpoint key: $checkpointKey")
+            debug(s"Ignoring unknown checkpoint key type for checkpoint key: $checkpointKey")
           }
         } catch {
           case e: Exception =>
